@@ -1,0 +1,14 @@
+<script>
+  window.logo="<%=image_url("icon.jpg")%>"
+</script>
+<%if logged_in? %>
+  <script type="text/javascript">
+    window.currentUser = <%= render(
+      "api/user/user.json.jbuilder",
+      user: current_user
+    ).html_safe%>
+  </script>
+<% end %>
+<main id="root">
+  <h3>Fix the code!</h3>
+</main>
